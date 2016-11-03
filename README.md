@@ -37,12 +37,15 @@ echo \yii\grid\GridView::widget([
                 [
                     'label' => 'Export',
                     'url'   => ['expert'],
+                    'linkOptions' => [
+                        'data-name-model' => function($data) { return $data->name },
+                     ]
                 ],
                 [
                     'label'   => 'Disable',
                     'url'     => ['disable'],
                     'linkOptions' => [
-                        'data-method' => 'post'
+                        'data-method' => 'post',
                     ],
                 ],
             ]
