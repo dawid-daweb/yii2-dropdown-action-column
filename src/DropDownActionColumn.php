@@ -79,8 +79,8 @@ class DropDownActionColumn extends Column {
     protected function renderDataCellContent($model, $key, $index) {
 
         $result = '';
-
-        $firstKey = reset(array_keys($this->items));
+        $itemsKeys = array_keys($this->items);
+        $firstKey = reset($itemsKeys);
 
         $mainBtn = $this->items[$firstKey];
 
